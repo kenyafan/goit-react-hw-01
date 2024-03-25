@@ -1,6 +1,4 @@
-import React from "react";
 import "./Profile.module.css";
-import userData from "./userData.json";
 
 const Profile = ({ name, tag, location, image, stats }) => {
   return (
