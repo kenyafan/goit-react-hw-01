@@ -1,14 +1,13 @@
 import FriendListItem from "../FriendListItem/FriendListItem";
-import "./FriendList.module.css";
 
-function FriendList() {
+const FriendList = ({ friends }) => {
   return (
     <ul>
-      <li>
-        <FriendListItem />
-      </li>
+      {friends.map((friend) => (
+        <FriendListItem key={friend.id} {...friend} />
+      ))}
     </ul>
   );
-}
+};
 
 export default FriendList;

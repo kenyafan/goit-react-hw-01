@@ -1,12 +1,15 @@
-import "./FriendListItem.module.css";
-function FriendListItem() {
+const FriendListItem = ({ avatar, name, isOnline, id }) => {
+  const statusColor = isOnline ? "green" : "red";
+
   return (
-    <div>
-      <img src="" alt="Avatar" width="48" />
-      <p>Friend name</p>
-      <p>Friend status</p>
-    </div>
+    <li key={id}>
+      <div>
+        <img src={avatar} alt="Avatar" width="48" />
+        <p>{name}</p>
+        <p style={{ color: statusColor }}>{isOnline ? "Online" : "Offline"}</p>
+      </div>
+    </li>
   );
-}
+};
 
 export default FriendListItem;
