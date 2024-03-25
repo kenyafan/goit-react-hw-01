@@ -1,5 +1,5 @@
-import userData from "./components/Profile/userData.json";
-import { Profile } from "./components/Profile/Profile";
+import Profile from "./Profile/Profile";
+import userData from "./userData.json";
 
 const App = () => {
   return (
@@ -14,3 +14,5 @@ const App = () => {
     </>
   );
 };
+
+export default App;
